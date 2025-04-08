@@ -1,5 +1,8 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 
+FROM mcr.microsoft.com/dotnet/sdk:8.0
+
 WORKDIR /app
-COPY ./app/WebApi/publish/ . 
+COPY ./app/WebApi ./WebApi
+WORKDIR /app/WebApi
+
 EXPOSE 5324
-ENTRYPOINT ["dotnet", "WebApi.dll"]
+ENTRYPOINT ["dotnet", "run", "--urls=http://0.0.0.0:5324"]

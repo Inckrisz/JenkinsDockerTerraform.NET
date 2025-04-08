@@ -33,7 +33,10 @@ out/
 app/WebApi/obj/
 app/WebApi/bin
 app/WebApi/publish/
-
+terraform/.terraform
+*.tfstate
+*.hcl
+*.backup
 
 
 # User-specific files
