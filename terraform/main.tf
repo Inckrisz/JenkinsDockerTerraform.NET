@@ -12,7 +12,7 @@ resource "aws_instance" "docker_instance" {
 
   key_name      = "VM-Key" 
   
-  security_groups = ["my_security_group"] 
+  security_groups = [aws_security_group.my_security_group.name]
 
   user_data = <<-EOF
             #!/bin/bash
