@@ -7,6 +7,7 @@ resource "aws_instance" "docker_instance" {
   instance_type = "t2.micro" 
 
   key_name      = "VM-Key" 
+  
   security_groups = ["my_security_group"] 
 
   user_data = <<-EOF
@@ -32,7 +33,7 @@ resource "aws_instance" "docker_instance" {
 }
 
 resource "aws_security_group" "my_security_group" {
-  name        = "my_security_group"
+  name = "my_security_group_${random_id.suffix.hex}"
   description = "Allow HTTP and SSH traffic"
 
   ingress {
