@@ -29,6 +29,8 @@ bin/
 obj/
 out/
 
+.env
+
 # Publish directory
 app/WebApi/obj/
 app/WebApi/bin
