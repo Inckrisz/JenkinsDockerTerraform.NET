@@ -2,6 +2,10 @@ provider "aws" {
   region = "eu-central-1"  
 }
 
+resource "random_id" "suffix" {
+  byte_length = 8  
+}
+
 resource "aws_instance" "docker_instance" {
   ami           = "ami-0ecf75a98fe8519d7"
   instance_type = "t2.micro" 
