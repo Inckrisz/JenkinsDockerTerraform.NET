@@ -42,7 +42,7 @@ docker logs myjenkins
 docker pull inckrisz/dotnet-webapi:latest
 ```
 
-### Ha saját magadnak akarod buildelni
+### Ha saját magadnak akarod buildelni, viszont szükséged lesz a /app mappában található .NET WebApi projektre, kivéve ha saját projektet akarsz felrakni a containeredbe.
 
 ```bash
 docker build -t mydotnetimage -f Dockerfile-net .
