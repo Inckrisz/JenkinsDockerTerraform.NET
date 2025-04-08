@@ -1,0 +1,42 @@
+# User-specific files
+.idea/
+.vscode/
+
+# Windows image file thumbs
+Thumbs.db
+Desktop.ini
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# .NET Core Build Folders
+bin/
+obj/
+out/
+
+# Publish directory
+app/WebApi/obj/
+app/WebApi/bin
+app/WebApi/publish/
+
+
+
+# User-specific files
+.idea/
+.vscode/
+.vs/
