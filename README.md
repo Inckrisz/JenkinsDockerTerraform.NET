@@ -18,13 +18,21 @@ docker logs myjenkins
 
 ### Jenkins beüzemelése
 
-#### A dashboardon -> Manage Jenkins -> Plugins -> Available Plugins -> Terraform és AWS Credentials plugin kell majd
+#### A dashboardon -> Manage Jenkins -> Plugins -> Available Plugins -> Terraform és AWS Credentials plugin kell majd -> Install majd vissza Dashboardra
 
 #### Dashboard -> Manage Jenkins -> Manage Credentials -> Globális credentialt kell létrehozni, egyet a Githubnak és egyet az AWS-nek.
 
+![Diagram](images/Jenkins1.png)
+
 #### Dashboard -> Manage Jenkins -> Tools -> Az alján terraform, automatic installation
 
+![Diagram](images/Jenkins2.png)
+
 #### Dashboard -> New Item -> Pipeline (névnek valamit) -> Add meg a github repót (az enyém vagy ha magadnak csinálod sajátot), a pipeline scriptbe pedig másold be az én Jenkinsfileom (Fontos hogy a toolsnál azt a nevet add meg a terraformnak aminek elnevezted az előző lépésben)
+
+![Diagram](images/Jenkins3.png)
+
+![Diagram](images/Jenkins4.png)
 
 ## .Net Docker contanier (opcionális)
 
@@ -58,9 +66,19 @@ docker run -d -p 5324:5324 --name mydotnet mydotnetimage
 
 #### Menj bele a létrehozott pipelineodba és buildelj egyet
 
-#### Ha jól csináltad, akkor az Amazon EC2 Instances-nél meg kell jelennie egy instancenek, keresd ki az IP-jét majd menj az IP:5324/swagger címre. Ha látod az UI-t akkor minden sikeres.
+![Diagram](images/Jenkins5.png)
+
+#### Ha jól csináltad, akkor az Amazon EC2 Instances-nél meg kell jelennie egy instancenek.
+
+![Diagram](images/Jenkins6.png)
+
+####  Keresd ki az IP-jét majd menj az IP:5324/swagger címre. Ha látod az UI-t akkor minden sikeres.
+
+![Diagram](images/Jenkins7.png)
 
 #### Ha már nem kell az instance, akkor a builden belül a Console Outputnál kérni fog egy inputot a szkript, menj az Igenre ha törölni szeretnél mindent amit létrehoztál.
+
+![Diagram](images/Jenkins8.png)
 
 
 
