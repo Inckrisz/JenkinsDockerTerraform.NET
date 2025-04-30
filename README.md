@@ -34,7 +34,7 @@ docker logs myjenkins
 
 ![Diagram](images/Jenkins4.png)
 
-## .Net Docker contanier (opcionális)
+## .Net Docker container (opcionális)
 
 #### Használhatod az enyémet is amin rajta van az alap .NET-es WebApi template, ehhez:
 
